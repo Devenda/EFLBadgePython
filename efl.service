@@ -1,0 +1,13 @@
+[Unit]
+Description=Daemon Test
+After=multi-user.target
+ 
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/Projects/EFLDB3/main.py
+Restart=always
+RestartSec=3
+ 
+[Install]
+WantedBy=multi-user.target
